@@ -5,6 +5,7 @@ metadata:
   name: {{ .Release.Name }}-main-servicemonitor
   labels:
     app: {{ .Release.Name }}
+    release: prometheus
 spec:
   selector:
     matchLabels:
@@ -21,6 +22,7 @@ metadata:
   name: {{ .Release.Name }}-canary-servicemonitor
   labels:
     app: {{ .Release.Name }}-canary
+    release: prometheus
 spec:
   selector:
     matchLabels:
